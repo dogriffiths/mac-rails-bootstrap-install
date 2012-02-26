@@ -1,5 +1,6 @@
 This is a Makefile to download and install Ruby and Rails on a Mac using the RVM. RVM 
 will install a version of Ruby and Rails in a directory called .rvm in your home directory.
+
 This will prevent you breaking the default Ruby install and will also allow you to install
 different Ruby/Rails versions for different users.
 
@@ -17,5 +18,13 @@ the following:
 The Makefile will download and install RVM into ~/.rvm. It will then download and install
 the latest release of Ruby v. 1.9.3 (including related libraries) and finally it will install
 gem and Rails.
+
+If the 'make' command runs with error, you will then need to log out and log back in again.
+
+When you log back in, check that something like this has appeared in your ~/.bash_profile:
+
+ [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+This code will setup your environment to use RVM's version of Ruby and Rails.
 
 DG
